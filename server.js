@@ -27,7 +27,7 @@ app.use(helmet.contentSecurityPolicy({
     formAction: ["'self'"]
   } 
 }));
-MongoClient.connect("mongodb+srv://paddison:sevenfl4tseven@cluster0.mnwde.mongodb.net/paddison?retryWrites=true&w=majority", {useUnifiedTopology: true, useNewUrlParser: true}, (err, client) => {
+MongoClient.connect(process.env.DATABASE, {useUnifiedTopology: true, useNewUrlParser: true}, (err, client) => {
 
   if (err) {
     console.log("Database error: " + err);
