@@ -13,9 +13,6 @@ var MongoClient = require('mongodb');
 var fetch = require("node-fetch");
 const requestIp = require('request-ip');
 
-const CONNECTION_STRING = "mongodb+srv://paddison:sevenfl4tseven@cluster0.mnwde.mongodb.net/paddison?retryWrites=true&w=majority"; //MongoClient.connect(CONNECTION_STRING, function(err, db) {});
-
-
 module.exports = function (app, db) {
 
   let collection = db.collection("stock");
